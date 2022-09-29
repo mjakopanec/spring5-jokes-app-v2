@@ -1,7 +1,6 @@
 package guru.springframework.chucknorris.controllers;
 
 import guru.springframework.chucknorris.services.JokeService;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +15,7 @@ public class JokeController {
 
     @RequestMapping({"/", ""})
     public String showJoke(Model model){
-        model.addAttribute("joke", jokeService.getRandomQuote())
+        model.addAttribute("joke", jokeService.getRandomQuote());
         return "index";
     }
 }
